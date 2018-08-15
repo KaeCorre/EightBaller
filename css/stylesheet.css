@@ -1,0 +1,148 @@
+body {
+	background-color: #2A1D36;
+	background-image: url("../image/background.png");
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+#container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 650px;
+	width: 850px;
+	/* background-color: #fff; */
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+#container #answer {
+	position: absolute;
+	z-index: -1;
+	pointer-events: none;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 85%;
+	margin-top: 1em;
+
+	border-radius: 0.5em;
+	/* border: 3px solid #777; */
+	border: none;
+	padding: .35em;
+	font-size: 32px;
+	/* background-color: #1D0E23; */
+	color: #fff;
+	opacity: 0;
+	text-align: center;
+	/* box-shadow: 0 0 15px #000; */
+}
+
+#container input[type="text"] {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 85%;
+	margin-top: 1em;
+
+	border-radius: 0.5em;
+	/* border: 3px solid #777; */
+	border: none;
+	padding: .35em;
+	font-size: 32px;
+	background-color: #1D0E23;
+	color: #fff;
+	opacity: 0.75;
+	text-align: center;
+	box-shadow: 0 0 15px #000;
+}
+
+#container input[type="text"]:focus {
+	outline: none;
+}
+
+#container input[type="text"]:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+#eightball {
+	position: relative;
+	top: 0;
+	left: 50%;
+	margin-left: -200px;
+	width: 400px;
+	height: 400px;
+
+	background-image: url("../image/8Ball.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.bob {
+	animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+	0% {transform: translateY(0px);}
+	50% {transform: translateY(10px);}
+	100% {transform: translateY(0px);}
+}
+
+.shake {
+	animation: shake 3s ease-in-out 1s 1;
+}
+
+@keyframes shake {
+	0% {transform: translateY(0px);}
+	35% {transform: translateY(100px);}
+	45% {transform: translateY(100px) translateX(60px);}
+	55% {transform: translateY(100px) translateX(-60px);}
+	65% {transform: translateY(100px) translateX(60px);}
+	75% {transform: translateY(100px) translateX(-30px);}
+	85% {transform: translateY(100px) translateX(0px);}
+	100% {transform: translateY(0px) translateX(0px);}
+}
+
+.fadeOut {
+	animation: fadeOut .5s linear 1 forwards;
+}
+
+@keyframes fadeOut {
+	0% {opacity: 0.75;}
+	100% {opacity: 0;}
+}
+
+.fadeIn {
+	animation: fadeIn .5s linear 1 forwards;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 0.75;}
+}
+
+button {
+	position: absolute;
+	display: none;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 45%;
+	margin-top: 3em;
+
+	border-radius: 0.5em;
+	/* border: 3px solid #777; */
+	border: none;
+	padding: .35em;
+	font-size: 32px;
+	background-color: #1D0E23;
+	color: #fff;
+	opacity: 0;
+	text-align: center;
+	box-shadow: 0 0 15px #000;
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
