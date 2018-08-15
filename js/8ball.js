@@ -110,11 +110,13 @@ function resetEightBall() {
 
 document.getElementById("question").addEventListener("submit", function(event) {
   event.preventDefault();
-  document.getElementById("eightball").classList.remove("bob");
-  document.getElementById("eightball").classList.add("shake");
-  document.getElementById("question-input").setAttribute("disabled", "");
-  document.getElementById("question-input").classList.remove("fadeIn");
-  document.getElementById("question-input").classList.add("fadeOut");
-  setTimeout(fadeInAnswer, 4500);
-  getAnswer();
+  if (document.getElementById("question-input").value !== "") {
+    document.getElementById("eightball").classList.remove("bob");
+    document.getElementById("eightball").classList.add("shake");
+    document.getElementById("question-input").setAttribute("disabled", "");
+    document.getElementById("question-input").classList.remove("fadeIn");
+    document.getElementById("question-input").classList.add("fadeOut");
+    setTimeout(fadeInAnswer, 4500);
+    getAnswer();
+  }
 });
